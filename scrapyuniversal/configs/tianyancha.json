@@ -1,0 +1,84 @@
+{
+  "spider": "universal",
+  "website": "中华网科技",
+  "type": "新闻",
+  "index": "https://www.tianyancha.com/",
+  "settings": {
+    "USER_AGENT": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+  },
+  "start_urls": {
+    "type": "dynamic",
+    "method": "tianyancha",
+    "args": [
+      1,
+      2
+    ]
+  },
+  "allowed_domains": [
+    "www.tianyancha.com"
+  ],
+  "rules": "tianyancha",
+  "item": {
+    "class": "CompanyItem",
+    "loader": "ChinaLoader",
+    "attrs": {
+      "companyName": [
+        {
+          "method": "xpath",
+          "args": [
+            "//h1[@class='name']/text()"
+          ]
+        }
+      ],
+      "address": [
+        {
+          "method": "xpath",
+          "args": [
+            "//div[@id='_container_baseInfo']/table[1]/tr[9]/td[1]/text()"
+          ]
+        }
+      ],
+      "capital": [
+        {
+          "method": "xpath",
+          "args": [
+            "//div[@id='_container_baseInfo']/table[2]/tr[1]/td[2]/text()"
+          ]
+        }
+      ],
+      "status": [
+        {
+          "method": "xpath",
+          "args": [
+            "//div[@id='_container_baseInfo']/table[2]/tr[2]/td[2]/text()"
+          ]
+        }
+      ],
+      "setupDate": [
+        {
+          "method": "xpath",
+          "args": [
+            "//div[@id='_container_baseInfo']/table[2]/tr[1]/td[4]/text()"
+          ]
+        }
+      ],
+      "uniCode": [
+        {
+          "method": "xpath",
+          "args": [
+            "//div[@id='_container_baseInfo']/table[2]/tr[3]/td[2]/text()"
+          ],
+          "re": "来源：(.*)"
+        }
+      ],
+      "industry": [
+        {
+          "method": "xpath",
+          "args": [
+            "//div[@id='_container_baseInfo']/table[2]/tr[5]/td[4]/text()"
+          ]
+        }
+      ]
+    }
+  }
+}
