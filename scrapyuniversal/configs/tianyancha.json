@@ -34,7 +34,7 @@
         {
           "method": "xpath",
           "args": [
-            "//div[@id='_container_baseInfo']/table[1]/tr[9]/td[1]/text()"
+            "////div[@id='_container_baseInfo']/table[2]/tbody/tr[10]/td[2]/text()"
           ]
         }
       ],
@@ -42,7 +42,7 @@
         {
           "method": "xpath",
           "args": [
-            "//div[@id='_container_baseInfo']/table[2]/tr[1]/td[2]/text()"
+            "//div[@id='_container_baseInfo']/table[2]/tbody/tr[1]/td[2]/div/@title"
           ]
         }
       ],
@@ -50,7 +50,7 @@
         {
           "method": "xpath",
           "args": [
-            "//div[@id='_container_baseInfo']/table[2]/tr[2]/td[2]/text()"
+            "//div[@id='_container_baseInfo']/table[2]/tbody/tr[2]/td[2]/text()"
           ]
         }
       ],
@@ -58,7 +58,7 @@
         {
           "method": "xpath",
           "args": [
-            "//div[@id='_container_baseInfo']/table[2]/tr[1]/td[4]/text()"
+            "//div[@id='_container_baseInfo']/table[2]/tbody/tr[1]/td[4]/text()"
           ]
         }
       ],
